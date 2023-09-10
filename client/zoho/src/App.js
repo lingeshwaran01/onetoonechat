@@ -60,7 +60,6 @@ function cliked(){
 }
   return (
     <div className="App">
-<div className='popup'></div>
 <h1>Your ID is  {userid}   <BsClipboard2Check  className="liop"onClick={cliped}/></h1>
 <ul className='listo'>
       {messageList.length &&
@@ -70,13 +69,12 @@ function cliked(){
       }
      </ul>
       <form className='sender' onSubmit={sendMessage}>
-
      <input placeholder='Enter Message' value={message} onChange={(e)=>{setMessage(e.target.value)}}></input>
      <button type='submit'>Send</button>
-
+     </form>
+     <form className='sender' onSubmit={sendMessage}>
      <input placeholder="Enter Id" value={key} onChange={(e)=>{setKey(e.target.value)}}></input>
      <button type='button' onClick={cliked}>Join</button>
-
      </form>
    
     </div>
